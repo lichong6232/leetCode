@@ -3,10 +3,11 @@ package cn.bupt.leetCode;
 /**
  * Created by chongli on 2017/7/20.
  */
-public class LongestCommonSubSequence1 {
+public class LongestCommonSubSequence {
 
     public static void main(String args[]){
-        
+        LongestCommonSubSequence longestCommonSubSequence=new LongestCommonSubSequence();
+        System.out.println();
     }
 
     public int findLCS(String A, int n, String B, int m) {
