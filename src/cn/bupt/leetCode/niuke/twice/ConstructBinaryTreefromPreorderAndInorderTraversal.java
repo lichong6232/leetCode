@@ -15,7 +15,6 @@ public class ConstructBinaryTreefromPreorderAndInorderTraversal {
         if (preLeftIndex>preRightIndex){
             return null;
         }
-
         int value = preorder[preLeftIndex];
         int inMidIndex = inLeftIndex;
         for (;inMidIndex<=inRightIndex;inMidIndex++){

@@ -41,7 +41,7 @@ public class MergeIntervals {
         Interval newInterval = intervals.get(0);
         for (int i=1;i<intervals.size();i++){
             Interval interval = intervals.get(i);
-            if (newInterval.end>=interval.start && newInterval.start <=interval.end){
+            if (newInterval.end>=interval.start){
                 newInterval = new Interval(Math.min(newInterval.start,interval.start),
                         Math.max(newInterval.end,interval.end));
             }else {

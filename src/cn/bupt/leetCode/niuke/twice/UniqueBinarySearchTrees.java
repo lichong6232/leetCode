@@ -27,8 +27,14 @@ public class UniqueBinarySearchTrees {
         }
         int sum = 0;
         for (int i=1;i<=n;i++){
-            sum += numTrees(i-1)*numTrees(n-1);
+            sum += numTrees(i-1)*numTrees(n-i);
         }
         return sum;
+    }
+
+    public static void main(String[] args) {
+        UniqueBinarySearchTrees uniqueBinarySearchTrees = new UniqueBinarySearchTrees();
+        int numTrees = uniqueBinarySearchTrees.numTrees(3);
+        System.out.println(numTrees);
     }
 }

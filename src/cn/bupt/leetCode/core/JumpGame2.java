@@ -7,6 +7,15 @@ package cn.bupt.leetCode.core;
 public class JumpGame2 {
 
     public int jump(int[] nums) {
+        int step=0,pre=0,curr=0;
+        for (int i=0;i<nums.length;i++){
+            if (i>pre){
+                step++;
+                pre = curr;
+            }
+            curr = Math.max(curr,i+nums[i]);
+        }
+        return step;
 
     }
 

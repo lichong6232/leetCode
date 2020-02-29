@@ -23,8 +23,9 @@ public class EditDistance {
      所以动态规划的转换公式为：
      当word1的第i个字符与word2的第j个字符相等的时候，dp[i][j] = dp[i-1][j-1]
      当word1的第i个字符与word2的第J个字符不相等的时候，dp[i][j]需要根据以下三情况的最小步骤+1。
-     1、word1的前i-1个字符转换到word2的前j个字符的最小步骤+1（word1加上第i个字符）
-     2、word1的前i个字符转换到word2的前j-1个字符的最小步骤+1（word1减去第i个字符）
+     1、word1的前i-1个字符转换到word2的前j个字符的最小步骤+1（word1的前i-1个字符经过变换变成了word2的前j个字符，则word2的前i个字符要想变成word2的前j个字符，只需要将word1的第i个字符删除）
+     2、word1的前i个字符转换到word2的前j-1个字符的最小步骤+1（word1的前i个字符经过dp[i][j-1]次的变换变成了word2的前j-1个字符，
+     word1的前i个字符要想变成word2的前j个字符，只需要在变成了的word2[0,j-1]的基础上加上word2的第j个字符）
      3、word1的前i-1个字符转换到word2的前j-1个字符的最小步骤+1(word1的第i个字符修改成word2的第j个字符)
 
      * @param word1
